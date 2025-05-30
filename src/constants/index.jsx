@@ -2,6 +2,7 @@ import { GlobeLock } from "lucide-react";
 import { PenTool } from 'lucide-react';
 import { FileCode2 } from 'lucide-react';
 import { Clapperboard } from 'lucide-react';
+import { MonitorSmartphone } from "lucide-react";
 
 
 
@@ -25,7 +26,8 @@ import user2 from "../assets/ClientsLogo/TAX WARRIOR.webp";
 import user3 from "../assets/ClientsLogo/lapasteleria.webp";
 import user4 from "../assets/ClientsLogo/THE NINE FILMS.webp";
 import user5 from "../assets/ClientsLogo/Patan.webp";
-import user6 from "../assets/ClientsLogo/SeaBeyond.webp";
+// import user6 from "../assets/ClientsLogo/SeaBeyond.webp";
+import user7 from "../assets/ClientsLogo/sprrrint.jpeg";
 // import FeatureSection from "../components/FeatureSection";
 
 
@@ -61,9 +63,9 @@ export const testimonials = [
     text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
   },
   {
-    user: "Sea & Beyond",
+    user: "Sprrrint",
     // company: "Synergy Systems",
-    image: user6,
+    image: user7,
     text: "We partnered with River Marketing Media for a complete website overhaul and SEO campaign. The difference is night and day! Our website is now user-friendly, visually appealing, and ranks much higher in search results. Their team was professional, communicative, and delivered on time.",
   },
 ];
@@ -77,18 +79,26 @@ export const servicesList = [
     ]
   },
   {
-    icon: <PenTool />,
-    text: "Creative Designs",
+    icon: <MonitorSmartphone />,
+    text: "App Development",
     description:[
-      "Our creative design services cover everything from website and mobile app interfaces to branding and digital content, ensuring your business stands out in every scroll, click, and tap."
+      "We specialize in custom mobile app development that transforms your ideas into high-performing digital products. Whether you're a startup, small business, or growing enterprise, our expert team creates apps that deliver real value and keep users engaged."
     ]
   },
+  
   {
     icon: <Clapperboard  />,
     text: "TVC Media Production",
     description:[
       "we create powerful visual stories that elevate your brand. Our TVC (Television Commercial) & Media Production team transforms your ideas into high-quality video content that connects emotionally and delivers results."
 
+    ]
+  },
+  {
+    icon: <PenTool />,
+    text: "Creative Designs",
+    description:[
+      "Our creative design services cover everything from website and mobile app interfaces to branding and digital content, ensuring your business stands out in every scroll, click, and tap."
     ]
   },
   {
