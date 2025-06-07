@@ -3,6 +3,7 @@ import logo from "../assets/logo.png"
 import { Link } from "react-scroll";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="mt-20 border-t py-10 border-neutral-700">
       <div className="grid grid-cols  lg:grid-cols-3 gap-4">
@@ -64,7 +65,7 @@ const Footer = () => {
 
       <div className="mt-2 border-t  pt-6 border-neutral-700">
         <p className="text-sm text-center ">
-          &copy; 2025 River Marketing Media. All Rights Reserved.
+          &copy; {currentYear} River Marketing Media. All Rights Reserved.
         </p>
       </div>
     </footer>

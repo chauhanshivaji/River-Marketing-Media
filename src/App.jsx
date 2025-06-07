@@ -17,6 +17,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const scrollInterval = useRef(null);
   const isScrolling = useRef(false);
+  const scrollSpeed = useRef(0);
 
   useEffect(() => {
     // Simulate loading time
@@ -27,6 +28,64 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Add keyboard event handling for smooth scrolling
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault(); // Prevent default scrolling behavior
+        
+        if (!isScrolling.current) {
+          isScrolling.current = true;
+          scrollSpeed.current = 0;
+        }
+
+        // Clear any existing interval
+        if (scrollInterval.current) {
+          clearInterval(scrollInterval.current);
+        }
+
+        // Start continuous scrolling with acceleration
+        scrollInterval.current = setInterval(() => {
+          const currentPosition = window.scrollY;
+          // Gradually increase scroll speed up to a maximum
+          scrollSpeed.current = Math.min(scrollSpeed.current + 2, 20);
+          
+          const scrollAmount = scrollSpeed.current;
+          const targetPosition = e.key === 'ArrowUp' 
+            ? Math.max(0, currentPosition - scrollAmount) // Scroll up, but not above 0
+            : currentPosition + scrollAmount; // Scroll down
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }, 16); // 60fps for smooth animation
+      }
+    };
+
+    const handleKeyUp = (e) => {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        // Clear the interval when key is released
+        if (scrollInterval.current) {
+          clearInterval(scrollInterval.current);
+          scrollInterval.current = null;
+        }
+        isScrolling.current = false;
+        scrollSpeed.current = 0;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+      if (scrollInterval.current) {
+        clearInterval(scrollInterval.current);
+      }
+    };
+  }, []);
 
   if (isLoading) {
     return <Loading />;
