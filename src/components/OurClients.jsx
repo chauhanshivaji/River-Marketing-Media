@@ -41,7 +41,7 @@ const OurClients = () => {
           <motion.div
             className="flex space-x-8"
             animate={{ x: [0, -1000] }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: Infinity, ease: "linear" }}
           >
             {[...clients, ...clients].map((client, index) => (
               <div key={index} className="flex flex-col items-center bg-white p-4 rounded-lg w-32 h-32 flex-shrink-0">

@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import image1 from "../assets/sea&beyond.jpg";
 import image2 from "../assets/sprrrint.png";
 import image3 from "../assets/lapasteleria.png";
-
-
+   
 
 const workCategories = {
   "Web Development": [
@@ -28,7 +27,7 @@ const workCategories = {
     url: "https://example.com/project4" },
   ],
 
-
+  
   "Branding": [
     { title: "Brand Design", 
     description: "Crafting unique brand identities to make your business stand out.", 
@@ -45,7 +44,7 @@ const workCategories = {
   ],
 };
 
-const OurWorkSection = () => {
+const Porfolio = () => {
   const [activeTab, setActiveTab] = useState("Web Development");
 
   return (
@@ -92,4 +91,4 @@ const OurWorkSection = () => {
   );
 };
 
-export default OurWorkSection;
+export default Porfolio;
