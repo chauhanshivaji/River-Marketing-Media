@@ -37,7 +37,7 @@ const HeroSection = () => {
             viewport={{once: false , amount: 0.7}}
       className="flex justify-center my-10">
         <a
-          href="https://wa.link/a8d6vj"
+          href="https://wa.link/a8d6vj"    
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md">

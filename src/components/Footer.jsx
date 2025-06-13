@@ -65,8 +65,7 @@ const Footer = () => {
 
       <div className="mt-2 border-t  pt-6 border-neutral-700">
         <p className="text-sm text-center ">
-          &copy; {currentYear} River Marketing Media. All Rights Reserved.
-        </p>
+         </p>
       </div>
     </footer>
   );

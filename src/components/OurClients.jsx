@@ -6,7 +6,7 @@ import user2 from "../assets/ClientsLogo/TAX WARRIOR.webp";
 import user3 from "../assets/ClientsLogo/lapasteleria.webp";
 import user4 from "../assets/ClientsLogo/THE NINE FILMS.webp";
 import user5 from "../assets/ClientsLogo/Patan.webp";
-import user6 from "../assets/ClientsLogo/SeaBeyond.webp";
+import user6 from "../assets/ClientsLogo/sprrrint.jpeg";
   
 // impoet frame motion
 // import {motion} from 'framer-motion';
@@ -37,18 +37,30 @@ const OurClients = () => {
           Clients
         </span>
       </motion.h2>
-        <div className="relative w-full flex items-center">
+        <div className="relative w-full overflow-hidden">
           <motion.div
             className="flex space-x-8"
-            animate={{ x: [0, -1000] }}
-            transition={{ repeat: Infinity, duration: Infinity, ease: "linear" }}
+            animate={{
+              x: [0, -1000],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
           >
             {[...clients, ...clients].map((client, index) => (
-              <div key={index} className="flex flex-col items-center bg-white p-4 rounded-lg w-32 h-32 flex-shrink-0">
+              <div 
+                key={index} 
+                className="flex flex-col items-center bg-white p-4 rounded-lg w-32 h-32 flex-shrink-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-28 h-28 object-contain rounded-lg "
+                  className="w-28 h-28 object-contain rounded-lg"
                 />
               </div>
             ))}
