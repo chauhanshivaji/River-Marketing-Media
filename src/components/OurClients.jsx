@@ -6,7 +6,9 @@ import user2 from "../assets/ClientsLogo/TAX WARRIOR.webp";
 import user3 from "../assets/ClientsLogo/lapasteleria.webp";
 import user4 from "../assets/ClientsLogo/THE NINE FILMS.webp";
 import user5 from "../assets/ClientsLogo/Patan.webp";
+// import user6 from "../assets/ClientsLogo/sprrrint.jpeg";
 import user6 from "../assets/ClientsLogo/sprrrint.jpeg";
+
   
 // impoet frame motion
 // import {motion} from 'framer-motion';

@@ -11,7 +11,7 @@ import CtaSection from "./components/CtaSection";
 import ContactBtn from "./components/ContactBtn";
 import OurClients from "./components/OurClients";
 import Loading from './components/Loading';
-import Porfolio from './components/Potfolio';
+// import Porfolio from './components/Potfolio';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -102,7 +102,7 @@ const App = () => {
         <FeatureSection />
         <OurClients />
         <Workflow />
-        <Porfolio />
+        {/* <Porfolio /> */}
         <Testimonials />
         <CtaSection />
         <Footer />
